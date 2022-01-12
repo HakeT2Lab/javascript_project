@@ -3,6 +3,9 @@
  * @param {number} width - the width of the square
  * @return {number} the area of the square
 **/
+
+
+
 function find_area_square(length, width){
     return length * width;
 }
@@ -14,7 +17,7 @@ function find_area_square(length, width){
 **/
 function sum_of_numbers(numbers){
     let sum = 0;
-    for(let i =0; i<numbers.length(); i++){
+    for(let i =0; i<numbers.length; i++){
         sum = sum + numbers[i];
     }
     return sum;
@@ -39,17 +42,20 @@ function find_smaller_number(a, b){
  * @return {number} the smallest number in the array
 **/
 
+// Mostlikely Does not handle all arrays correctly
 function find_smallest_number(numbers){
-    
+    let smallest = new Boolean(false);
     let smallest_num = numbers[0];
-    for(let i =0; i<numbers.length(); i++){
-        for(let k = 0; k<numbers.length(); k++){
-            if(numbers[i] < numbers[k]){
-                k++;
+    for(let i =0; i<numbers.length; i++){
+        for(let j =0; j<numbers.length; j++){
+            if(numbers[i]< numbers[j] ){
+                smallest_num = numbers[i];
             }
         }
     }
+    return smallest_num;
 }
+
 
 
 
@@ -60,7 +66,7 @@ function find_smallest_number(numbers){
 **/
 
 function abbreviate(word, length){
-
+    return word.substring(0,length);
 }
 
 
@@ -71,7 +77,7 @@ function abbreviate(word, length){
 **/
 
 function get_full_name(first_name, last_name){
-
+    return first_name +" "+ last_name;
 }
 
 /**
